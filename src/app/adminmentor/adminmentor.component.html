@@ -1,0 +1,40 @@
+<table class="tbl">
+        <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>mobile</th>
+                    <th>Experience</th>
+                    <th>Delete</th>
+                    <th>Block</th>
+                </tr>
+            </thead>
+        <tbody *ngFor="let item of list">
+          <tr>
+            <td>
+              {{item.mentorId}}
+            </td>
+            <td>
+                {{item.mentorName}}
+              </td>
+              <td>
+                  {{item.mentor_email}}
+                </td>
+                <td>
+                    {{item.mentor_Contact}}
+                  </td>
+                  <td>
+                      {{item.mentor_Experience}}
+                  </td>
+                  <td> <button type="submit" (click)="Block(item.mentorId)">Block</button></td>
+                  <td> <button type="submit" (click)="UnBlock(item.mentorId)">UnBlock</button></td>
+                <td> <button type="submit" (click)="Delete(item.mentorId)">Delete</button></td>
+                  
+                  </tr>
+<!--             
+              <td> <button type="submit">Block</button></td>
+              <td> <button type="submit" (click)="Delete(item.mentorId)">Delete</button></td>
+          </tr> -->
+        </tbody>
+      </table>

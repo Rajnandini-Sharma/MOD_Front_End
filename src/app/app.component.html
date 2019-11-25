@@ -1,0 +1,118 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src = "https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+<style>
+   .nav-item{
+    border-radius: 25px;
+  display: inline-block;
+  font-weight: bold; 
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+  background-color: mediumseagreen;
+  
+
+   }
+    .dropbtn
+  {
+  border-radius: 25px;
+  display: inline-block;
+  font-weight: bold; 
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+  background-color: mediumseagreen;
+  
+  }
+
+  .dropdown:hover .dropbtn
+  {
+   background-color: mediumseagreen;
+   color: blue;
+  }
+
+  li.dropdown 
+  {
+  display: inline-block;
+  }
+
+  .dropdown-content
+  {
+  border-radius: 25px;
+  display: none;
+  position: absolute;
+  background-color:mediumseagreen;
+  min-width: 80px;
+  padding: 12px 9px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  }
+
+  .dropdown-content a 
+  {
+  border-radius: 25px;
+  border-color:black;
+  background-color: black;
+  padding: 12px 9px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  }
+
+  .dropdown-content a:hover 
+  {
+  border-radius: 25px;
+  background-color: mediumseagreen;
+  }
+
+  .dropdown:hover .dropdown-content 
+  {
+  display: block;
+  }
+    </style>
+<nav class="navbar navbar-expand-md navbar bg-dark sticky-top mr-auto">
+      <h3 style="color:MediumSeaGreen;">Mentor on Demand</h3>
+
+  <div class="container">
+    
+      <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target ="#navbarResponsive">
+         
+      </button>
+ 
+      <div class = "collapse navbar-collapse" id = "navbarResponsive" style="margin-right: -110px;">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item active"><a class = "nav-link"  routerLink = "/search" routerLinkActive = "active">Search</a></li>
+             
+                  <li class="nav-item"><a class = "nav-link"  routerLink = "/mentor-sign-in" routerLinkActive = "active">Sign-In</a></li>
+                
+                            <!-- <div class="custom-select">
+                                <select>
+                                  <option value="0">Sign Up</option>
+                                      <option value="1"><li class="nav-item"><a   routerLink = "/usersignup" routerLinkActive = "active">User</a></li>
+                                      <option value="2"> <li class="nav-item"><a   routerLink = "/mentorsignup" routerLinkActive = "active">Mentor</a></li>
+                                  </option>
+                                </select>
+                              </div>    
+                                                       -->
+                               <li class="dropdown" style="float:right">
+                              <a href="javascript:void(0)" class="dropbtn">Sign Up</a>
+                              <div class="dropdown-content">
+                                <a routerLink="usersignup">User</a>
+                                <a routerLink="mentorsignup">Mentor</a>
+                                </div>
+                              </li>
+                      <li class="nav-item"><a class = "nav-link"  routerLink = "/contact" routerLinkActive = "active">Contact</a></li>
+                      </ul>                             
+      </div>    
+  </div>
+
+</nav>
+
+
+<router-outlet></router-outlet>

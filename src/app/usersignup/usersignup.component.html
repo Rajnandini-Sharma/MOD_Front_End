@@ -1,0 +1,104 @@
+<head>
+        <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 15px;
+          text-align: left;
+        }
+        table#t01 {
+          width: 100%;    
+          background-color: gray;
+        }
+        </style>
+        </head>
+<div class="container">
+        <table id="t01">
+        <!-- <tr>
+            <td>mentorId</td>
+            <td><input type="number" name="mentorid" id="" [(ngModel)]="item.mentorId"></td>
+        </tr> -->
+        <tr>
+            <td>User Name</td>
+            <td><input type="text" name="mentorname" id="" [(ngModel)]="item.student_Name"></td>
+        </tr>
+       
+        <tr>
+            <td> <label for="email1" > <b> Email ID </b> </label> <br></td>
+            <!-- <td><input type="text" name="email" id="" [(ngModel)]="item.email"></td> -->
+            <input type ="text" #email1="ngModel" placeholder="Enter Email" name="email"  [(ngModel)]="item.student_email" required email /> <br>
+            <div  *ngIf="email1.errors && (email1.dirty || email1.touched)">
+                <p  *ngIf="email1.errors.required"> * Email ID is required </p> 
+                <p  *ngIf="email1.errors.email"> * Email ID is not valid </p>
+              </div>
+        </tr>
+              <tr>
+                <td>Mobile Number</td>
+                <td><input type="number" name="mobilenum" id="" [(ngModel)]="item.student_Contact"></td>
+            </tr>
+        
+        <tr>
+                <td>Password</td>
+                <td><input type="text" name="Password" id="" [(ngModel)]="item.student_Password"></td>
+            </tr>
+
+        <!-- <tr>
+            <td>Availability</td>
+            <td><input type="text" name="avail" id="" [(ngModel)]="item.Availability"></td>
+        </tr>
+        <tr>
+            <td>Active</td>
+            <td><input type="text" name="active" id="" [(ngModel)]="item.active"></td>
+        </tr> -->
+        <tr>
+            <td>
+                <button (click)="Add()">Sign Up</button>
+                <!-- <button (click)="Search()">Search</button> -->
+                <!-- <button (click)="Update()">Update</button>
+                <button (click)="Delete()">Delete</button> -->
+            </td>
+        </tr>
+        <tr>
+                <td><h5>Already Sign In? <a routerLink="../mentor-sign-in">Sign-In</a>
+                </h5></td>
+              </tr>
+         
+   
+    </table>
+   <!-- <table class="table table-hover">
+       <thead>
+           <tr>
+               <th>ID</th>
+               <th>Name</th>
+               <td>Mobile Number</td>
+               <td>E-Mail</td>
+               <td>Experience</td>
+               <td>primary_skill</td>
+               <td>Timeslot</td>
+               <td>Availability</td>
+               <td>active</td>
+
+           </tr>
+       </thead> -->
+       <!-- <tbody *ngFor="let item of list">
+           <tr>
+               <td>{{item.mid}}</td>
+               <td>{{item.mname}}</td>
+               <td>{{item.mobile}}</td>
+               <td>{{item.email}}</td>
+               <td>{{item.Exp}}</td>
+               <td>{{item.primary_skill}}</td>
+               <td>{{item.Timeslot}}</td>
+               <td>{{item.Availability}}</td>
+               <td>{{item.active}}</td>
+           </tr>
+       </tbody> -->
+  
+   
+</div>
+
+<router-outlet></router-outlet>
+
+{{item|json}}

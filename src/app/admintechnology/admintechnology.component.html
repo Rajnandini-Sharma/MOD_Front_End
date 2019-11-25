@@ -1,0 +1,42 @@
+<table class="tbl">
+        <thead>
+                <tr>
+                    <th>Tech_id</th>
+                    <th> Tech_name</th>
+                    <th>TOC</th>
+                    <th>Rating</th>  
+                    <th>Fees</th> 
+                    <th>Duration</th>
+                </tr>
+            </thead>
+        <tbody *ngFor="let item of list">
+          <tr>
+            <td>
+              {{item.tech_id}}
+            </td>
+            <td>
+                    {{item.tech_name}}
+                  </td>
+                  <td>
+                        {{item.toc}}
+                      </td>
+                      <td>
+                        {{item.rating}}
+                      </td>
+            <td>
+                {{item.fees}}
+              </td>
+              <td>
+                  {{item.duration}}
+             </td>
+  
+            </tr>
+        </tbody>
+      </table>
+      <button (click)="add()">Add</button>
+      <div *ngIf="addclick==1">
+      <input type="text" name="Name" [(ngModel)]="item.tech_name"><br>
+      <input type="text" name="toc" [(ngModel)]="item.toc"><br>
+      <input type="number" name="fee" [(ngModel)]="item.fees"><br>
+      <input type="number" name="duration" [(ngModel)]="item.duration"><br></div>
+      <button (click)="AddTechnology()">Add</button>

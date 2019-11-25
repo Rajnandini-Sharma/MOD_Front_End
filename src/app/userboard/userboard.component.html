@@ -1,0 +1,99 @@
+<div class="whole">
+    Welcome {{UserName}}!
+    <button type="submit" (click)="add()">Edit Profile</button>
+    <div *ngIf="addclick==1">
+        <head>
+            <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            th, td {
+              padding: 15px;
+              text-align: left;
+            }
+            table#t01 {
+              width: 100%;    
+              background-color: gray;
+            }
+            </style>
+            </head>
+        <table id="t01">
+    <!-- <tr>
+        <td>mentorId</td>
+        <td><input type="number" name="mentorid" id="" [(ngModel)]="item.mentorId"></td>
+    </tr> -->
+    <tr>
+        <td>User Name</td>
+        <td><input type="text" name="mentorname" id="" [(ngModel)]="item.student_Name"></td>
+    </tr>
+   
+    <tr>
+        <td> <label for="email1" > <b> Email ID </b> </label> <br></td>
+        <!-- <td><input type="text" name="email" id="" [(ngModel)]="item.email"></td> -->
+        <input type ="text" #email1="ngModel" placeholder="Enter Email" name="email"  [(ngModel)]="item.student_email" required email /> <br>
+        <div  *ngIf="email1.errors && (email1.dirty || email1.touched)">
+            <p  *ngIf="email1.errors.required"> * Email ID is required </p> 
+            <p  *ngIf="email1.errors.email"> * Email ID is not valid </p>
+          </div>
+    </tr>
+          <tr>
+            <td>Mobile Number</td>
+            <td><input type="number" name="mobilenum" id="" [(ngModel)]="item.student_Contact"></td>
+        </tr>
+    
+    <tr>
+            <td>Password</td>
+            <td><input type="text" name="Password" id="" [(ngModel)]="item.student_Password"></td>
+        </tr>
+
+        <tr><td><button type="submit" (click)="Update()">Edit</button></td></tr>
+    </table>
+ </div>
+ <button type="submit" (click)="UserCurTrainings()"> Current Trainings</button>
+ <table>
+    <thead>
+            <tr>
+                <th>Training-ID</th>
+                <th>User ID</th>
+                <th>Mentor ID</th>
+                <th>Technology ID</th>
+                <th>Start date</th>
+                <th>End date</th>
+                <th>Timeslot</th>
+                <!-- <th>Status</th>
+                <th>Progress</th>
+                <th>Rating</th>
+                 -->
+            </tr>
+        </thead>
+    <tbody *ngFor="let items of lists">
+      <tr>
+        <td>
+        {{items.training_id}}  
+        </td>
+        <td>
+            {{items.student_Id}}
+          </td>
+          <td>
+              {{items.mentorId}}
+            </td>
+            <td>
+                {{items.tech_id}}
+              </td>
+              <td>
+                {{items.startDate}}
+              </td>
+              <td>
+                {{items.endDate}}
+              </td>
+              <td>
+                {{items.timeslot}}
+              </td>
+        
+</tr>
+</tbody>
+</table>
+ {{lists|json}}
+ </div>
+ {{item|json}}

@@ -1,0 +1,48 @@
+<table class="tbl">
+        <thead>
+                <tr>
+                    <th>training_id</th>
+                    <th>student_Id</th>
+                    <th>mentorId</th>
+                    <th>tech_id</th>
+                    <th>StartDate</th>
+                    <th>EndDate</th>
+                    <th>timeslot</th>
+              
+                </tr>
+            </thead>
+        <tbody *ngFor="let item of list">
+          <tr>
+            <td>
+              {{item.training_id}}
+            </td>
+            <td>
+                    {{item.student_Id}}
+                  </td>
+                  <td>
+                        {{item.mentorId}}
+                      </td>
+            <td>
+                {{item.tech_id}}
+              </td>
+              <td>
+                  {{item.startDate}}
+                </td>
+                <td>
+                        {{item.endDate}}
+                      </td>
+                      <td>
+                            {{item.timeslot}}
+                          </td>
+                          <!-- <td>
+                                {{item.status}}
+                              </td>
+                <td>
+                    {{item.progress}}
+                  </td>
+                  <td>
+                        {{item.rating}}
+                      </td> -->
+            </tr>
+        </tbody>
+      </table>
