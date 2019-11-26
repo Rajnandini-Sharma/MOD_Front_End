@@ -25,13 +25,13 @@
     </tr> -->
     <tr>
         <td>User Name</td>
-        <td><input type="text" name="mentorname" id="" [(ngModel)]="item.student_Name"></td>
+        <td><input type="text" name="mentorname" id="" [(ngModel)]="item.Student_Name"></td>
     </tr>
    
     <tr>
         <td> <label for="email1" > <b> Email ID </b> </label> <br></td>
         <!-- <td><input type="text" name="email" id="" [(ngModel)]="item.email"></td> -->
-        <input type ="text" #email1="ngModel" placeholder="Enter Email" name="email"  [(ngModel)]="item.student_email" required email /> <br>
+        <input type ="text" #email1="ngModel" placeholder="Enter Email" name="email"  [(ngModel)]="item.Student_email" required email /> <br>
         <div  *ngIf="email1.errors && (email1.dirty || email1.touched)">
             <p  *ngIf="email1.errors.required"> * Email ID is required </p> 
             <p  *ngIf="email1.errors.email"> * Email ID is not valid </p>
@@ -39,12 +39,12 @@
     </tr>
           <tr>
             <td>Mobile Number</td>
-            <td><input type="number" name="mobilenum" id="" [(ngModel)]="item.student_Contact"></td>
+            <td><input type="number" name="mobilenum" id="" [(ngModel)]="item.Student_Contact"></td>
         </tr>
     
     <tr>
             <td>Password</td>
-            <td><input type="text" name="Password" id="" [(ngModel)]="item.student_Password"></td>
+            <td><input type="text" name="Password" id="" [(ngModel)]="item.Student_Password"></td>
         </tr>
 
         <tr><td><button type="submit" (click)="Update()">Edit</button></td></tr>

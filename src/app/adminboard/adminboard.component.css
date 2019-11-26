@@ -1,0 +1,43 @@
+.logout {
+    
+    border-radius: 25px;
+    background-color: mediumseagreen;
+    border: none;
+    color: blue;
+    font-weight: bold; 
+    text-align: center;
+    padding: 14px 14px;
+    padding: 15px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    float: right;
+  
+}
+
+  .logout:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  .sidenav {
+    border-radius: 25px;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    float: left;
+    background: mediumseagreen;
+    overflow-x: hidden;
+    padding: 50px 0;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: blue;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: blue;}
+  

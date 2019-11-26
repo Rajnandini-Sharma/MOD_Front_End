@@ -11,7 +11,7 @@ import { SearchService } from '../Services/search.service';
 export class SearchComponent implements OnInit {
   item:Mentor;
   list:Mentor[];
-  skill;
+  skills;
   from_timeslot;
   to_timeslot;
 
@@ -23,7 +23,7 @@ export class SearchComponent implements OnInit {
   }
   public Search()
   {
-    this._service.SearchMentor(this.skill,this.from_timeslot,this.to_timeslot).subscribe(k=>{this.list=k;
+    this._service.SearchMentor(this.skills,this.from_timeslot,this.to_timeslot).subscribe(k=>{this.list=k;
     console.log(k);
     });
 }

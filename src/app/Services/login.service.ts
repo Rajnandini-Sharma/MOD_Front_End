@@ -14,5 +14,5 @@ export class LoginService {
     return this._client.get<any>(this.path+'/Validate/'+email+'/'+pwd);
 
   }
-
+ 
 }

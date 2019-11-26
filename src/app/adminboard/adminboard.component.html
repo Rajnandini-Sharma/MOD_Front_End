@@ -1,5 +1,7 @@
-<button (click)="logout()">Logout</button>
-
+<button class="logout" (click)="logout()">Logout</button>
+<!-- <div  class="sidenav">
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+   <div class="sidenav">
 <ul>
 
         <!-- <li><a class="active" href="#home">Home</a></li> -->
@@ -8,5 +10,8 @@
         <li><a routerLink="admintraining">Training</a></li>
         <li><a routerLink="admintechnology">Technology</a></li>
         <li><a routerLink="adminpayment">Payment</a></li>
-      </ul>
+      </ul></div>
+    <!-- </div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Admin Settings</span>
+     -->
 <router-outlet></router-outlet>      
